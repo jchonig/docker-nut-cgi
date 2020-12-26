@@ -6,7 +6,6 @@ ENV \
 	HOME=/config \
 	TZ=UTC
 
-# Add SpiderOakONE from tarball
 RUN \
 	echo "**** install packages ****" && \
 	apt-get update && \
@@ -18,5 +17,9 @@ RUN \
 	rm -rf /var/lib/apt/lists/*
 
 COPY root /
+
+RUN \
+	echo "*** fix /etc/nut/upsset.conf ***" && \
+        sed -i '/I_HAVE_SECURED_MY_CGI_DIRECTORY/s/^### //' /etc/nut/upsset.conf
 
 VOLUME ["/config/nut/www"]

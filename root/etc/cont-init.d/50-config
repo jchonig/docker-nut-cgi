@@ -15,6 +15,7 @@ print_vars () {
 
 print_vars
 
+# Copy HTML files where the web server container can see them
 mkdir -p /config/www/nut && cp -p /usr/share/nut/www/* /config/www/nut
 
 chown -R abc:abc /config
