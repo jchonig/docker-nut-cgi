@@ -1,0 +1,20 @@
+#!/usr/bin/with-contenv bash
+
+print_vars () {
+    if [ -n "${1}" ]; then
+	title=" ${1}"
+    else
+	title=""
+    fi
+    echo "Environment${title}:"
+    echo "    HOME=${HOME}"
+    echo "    PUID=${PUID}"
+    echo "    PGID=${PGID}"
+    echo "    TZ=${TZ}"
+}
+
+print_vars
+
+mkdir -p /config/www/nut && cp -p /usr/share/nut/www/* /config/www/nut
+
+chown -R abc:abc /config
