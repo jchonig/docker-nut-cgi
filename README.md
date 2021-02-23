@@ -47,11 +47,11 @@ volumes:
 
 ## Environment Variables (-e)
 
-| Env       | Function                                             |
-| ---       | --------                                             |
-| PUID=1000 | for UserID - Set to UID that will run SpiderOak ONE  |
-| PGID=1000 | for GroupID - Set to GID that will run SpiderOak ONE |
-| TZ=UTC    | Specify a timezone to use EG UTC                     |
+| Env       | Function                                     |
+| ---       | --------                                     |
+| PUID=1000 | for UserID - Set to UID that will run Nginx  |
+| PGID=1000 | for GroupID - Set to GID that will run Nginx |
+| TZ=UTC    | Specify a timezone to use EG UTC             |
 
 ## Volume Mappings (-v)
 
