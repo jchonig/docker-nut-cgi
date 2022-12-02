@@ -1,4 +1,4 @@
-FROM lsiobase/ubuntu:focal
+FROM lsiobase/ubuntu:jammy
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -18,8 +18,4 @@ RUN \
 
 COPY root /
 
-RUN \
-	echo "*** fix /etc/nut/upsset.conf ***" && \
-        sed -i '/I_HAVE_SECURED_MY_CGI_DIRECTORY/s/^### //' /etc/nut/upsset.conf
-
-VOLUME ["/config/nut/www"]
+VOLUME ["/config/www/nut"]

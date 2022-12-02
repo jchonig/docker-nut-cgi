@@ -15,7 +15,9 @@ print_vars () {
 
 print_vars
 
+echo "*** fix /etc/nut/upsset.conf ***"
+sed -i '/I_HAVE_SECURED_MY_CGI_DIRECTORY/s/^### //' /etc/nut/upsset.conf
+
 # Copy HTML files where the web server container can see them
 mkdir -p /config/www/nut && cp -p /usr/share/nut/www/* /config/www/nut
-
-chown -R abc:abc /config
+chown -R abc:abc /config/www/nut
