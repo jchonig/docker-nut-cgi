@@ -1,4 +1,4 @@
-FROM lsiobase/ubuntu:jammy
+FROM --platform=linux/arm64 lsiobase/ubuntu:jammy
 COPY qemu-aarch64-static /usr/bin/
 
 ARG DEBIAN_FRONTEND=noninteractive
