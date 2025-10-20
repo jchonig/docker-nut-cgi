@@ -1,4 +1,4 @@
-FROM lsiobase/ubuntu:jammy
+FROM lsiobase/ubuntu:noble
 
 ARG DEBIAN_FRONTEND=noninteractive
 
