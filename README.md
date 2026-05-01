@@ -3,6 +3,8 @@ A container with the CGI tools of [Network UPS
 Tools](https://networkupstools.org) and fcgiwrap to be used in
 conjunction with an nginx container.
 
+Image hosted at: `ghcr.io/jchonig/nut-cgi`
+
 Many nginx containers are based on alpine which does not have the Nut
 CGI tools available.  This container is based on Ubuntu and installs
 nut-cgi and fcgiwrap.
@@ -18,7 +20,7 @@ Compatible with docker-compose v3 schemas.
 version: "3"
 services:
   nut-cgi:
-    image: jchonig/nut-cgi
+    image: ghcr.io/jchonig/nut-cgi
     container_name: nut-cgi
     environment:
       - PUID=1000
